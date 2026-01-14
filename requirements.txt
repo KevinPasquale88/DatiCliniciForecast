@@ -41,3 +41,6 @@ typing_extensions==4.15.0
 tzdata==2025.2
 ucimlrepo==0.0.7
 urllib3==2.5.0
+imbalanced-learn==0.14.1
+imblearn==0.14.1
+sklearln-compat==0.1.5
