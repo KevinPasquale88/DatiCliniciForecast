@@ -5,6 +5,7 @@ import json
 from imblearn.over_sampling import SMOTE
 import seaborn as sns
 import matplotlib.pyplot as plt
+import ollama
 
 # import dataset
 # fetch dataset 
@@ -49,3 +50,11 @@ X_resampled, y_resampled = smote.fit_resample(X, y)
 print("Shape before SMOTE:", X.shape, y.shape)
 print("Shape after SMOTE:", X_resampled.shape, y_resampled.shape)
 print(X_resampled.head())
+
+
+
+response = ollama.embed(
+    model='milkey/gte:base-zh-f16',
+    input='The sky is blue because of Rayleigh scattering',
+)
+print(response)
